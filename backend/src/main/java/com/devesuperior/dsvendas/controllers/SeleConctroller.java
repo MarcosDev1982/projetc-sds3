@@ -30,6 +30,15 @@ public class SeleConctroller {
 		 return ResponseEntity.ok(list);
 	}
 	
+	@GetMapping(value = "/amount-by-seller")
+	public ResponseEntity<List<SaleSumDTO>> amountGroupBySeller(){
+		
+		 List<SaleSumDTO> list =  service.amountGroupedBySeller();
+		 return ResponseEntity.ok(list);
+	}
+	
+	
+	
 	@GetMapping(value = "/success-by-seller")
 	public ResponseEntity<List<SaleSuccessDTO>> successGroupBySeller(){
 		
